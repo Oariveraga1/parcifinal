@@ -17,7 +17,7 @@
         {
             for (int columna = 0; columna < columnas; columna++) // Recorrer las columnas
             {
-                matriz[fila, columna] = aleatorio.Next(1, 10); // Número entre 1 y 9
+                matriz[fila, columna] = aleatorio.Next(1, 9); // Número entre 1 y 9
             }
         }
 
@@ -75,5 +75,16 @@
         }
     }
 
-   
+    // Método para mostrar la matriz en formato de tabla
+    static void MostrarMatriz(int[,] matriz)
+    {
+        for (int fila = 0; fila < matriz.GetLength(0); fila++)
+        {
+            for (int columna = 0; columna < matriz.GetLength(1); columna++)
+            {
+                Console.Write(matriz[fila, columna] + " "); // Mostrar valor en la posición actual
+            }
+            Console.WriteLine(); // Saltar a la siguiente fila
+        }
+    }
 }
